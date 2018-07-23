@@ -1,0 +1,23 @@
+
+/*
+Count the number of nodes 
+in the linked list
+Node is defined as 
+struct node
+{
+    int data;
+    struct node* next;
+};
+ 
+*/
+int getCount(struct node* head){
+    struct node* temp = head;
+    int cnt=0;
+    if(head != NULL) cnt++;
+    else return 0;
+    while(temp->next != NULL){
+        cnt++;
+        temp = temp->next;
+    }
+    return cnt;
+}
